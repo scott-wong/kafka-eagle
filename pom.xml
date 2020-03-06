@@ -13,6 +13,8 @@
 		<project.version>1.4.5</project.version>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<modules>
@@ -22,4 +24,28 @@
 		<module>kafka-eagle-core</module>
 		<module>kafka-eagle-plugin</module>
 	</modules>
+		<repositories>
+		<repository>
+			<!-- use aliyun maven repo in China -->
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>aliyun</id>
+			<name>aliyun nexus</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>aliyun</id>
+			<name>aliyun nexus</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
